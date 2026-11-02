@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><title>BALANCE DESIGN 二半空間設計</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet"><style>html{scroll-behavior:smooth}body{--bg:#f3f1ec;--ink:#161616;--line:#16161626;--line2:#16161633;--mut:#555;--mut2:#444;--mut3:#333;--ph:#e4e0d7;--btn:#161616;--btnfg:#FAF500;--hl:#161616;--hlbg:#FAF500;transition:background .35s,color .35s}body.bd-night{--bg:#121211;--ink:#f0ede6;--line:#ffffff26;--line2:#ffffff33;--mut:#a8a49b;--mut2:#bdb9b0;--mut3:#cfcbc2;--ph:#222;--btn:#FAF500;--btnfg:#161616;--hl:#FAF500;--hlbg:transparent}body{margin:0;background:var(--bg);color:var(--ink);font-family:'Archivo','Noto Sans TC',sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}a:hover{opacity:.75}section,footer{scroll-margin-top:120px}@keyframes bdRise{from{transform:translateY(105%)}to{transform:none}}@keyframes bdFade{from{opacity:0}to{opacity:1}}@keyframes bdBar{from{width:0}to{width:100%}}</style></helmet>
+<div style="min-height:100vh">
+<header style="position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;padding:clamp(14px,1.4vw,18px) clamp(20px,4vw,64px);flex-wrap:nowrap">
+  <a href="#top" style="display:flex;align-items:baseline;gap:14px"><span style="font-size:22px;letter-spacing:-.03em"><b style="font-weight:800">BALANCE</b><span style="font-weight:300">DESIGN</span></span><sc-if value="{{ desk }}" hint-placeholder-val="{{ true }}"><span style="font-size:13px;letter-spacing:.3em;color:var(--mut)">二半空間設計</span></sc-if></a>
+  <div style="display:flex;align-items:center;gap:clamp(10px,1.6vw,28px);min-width:0">
+  <sc-if value="{{ desk }}" hint-placeholder-val="{{ true }}">
+  <nav style="display:flex;align-items:center;gap:clamp(10px,1.6vw,28px);line-height:1;font-size:clamp(13px,1.2vw,15px);flex-wrap:nowrap;white-space:nowrap;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;max-width:100%">
+    <a href="#about" style="padding:8px 0" style-hover="background:transparent;box-shadow:inset 0 -3px 0 #FAF500">關於我們</a><a href="#org" style="padding:8px 0" style-hover="background:transparent;box-shadow:inset 0 -3px 0 #FAF500">組織</a><a href="#business" style="padding:8px 0" style-hover="background:transparent;box-shadow:inset 0 -3px 0 #FAF500">業務</a><a href="#area" style="padding:8px 0" style-hover="background:transparent;box-shadow:inset 0 -3px 0 #FAF500">服務區域</a><a href="#vendor" style="padding:8px 0" style-hover="background:transparent;box-shadow:inset 0 -3px 0 #FAF500">合作廠商</a><a href="#sop" style="padding:8px 0" style-hover="background:transparent;box-shadow:inset 0 -3px 0 #FAF500">工作流程</a><a href="#portfolio" style="padding:8px 0" style-hover="background:transparent;box-shadow:inset 0 -3px 0 #FAF500">作品案例</a><a href="#contact" style="background:var(--btn);color:var(--btnfg);padding:8px 14px" style-hover="background:#FAF500;color:#161616;color:#161616">聯絡</a>
+  </nav>
+  </sc-if>
+  <button onClick="{{ toggleTheme }}" aria-label="{{ themeLabel }}" title="{{ themeLabel }}" style="width:34px;height:34px;flex:none;display:flex;align-items:center;justify-content:center;border:1px solid var(--line2);border-radius:50%;background:transparent;color:var(--ink);padding:0;cursor:pointer;transition:border-color .3s" style-hover="border-color:var(--ink)"><sc-if value="{{ isDay }}" hint-placeholder-val="{{ true }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"></path></svg></sc-if><sc-if value="{{ night }}" hint-placeholder-val="{{ false }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg></sc-if></button>
+  <sc-if value="{{ mob }}" hint-placeholder-val="{{ false }}"><button onClick="{{ openMenu }}" aria-label="選單" style="width:34px;height:34px;flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;border:1px solid var(--line2);border-radius:50%;background:transparent;padding:0;cursor:pointer"><span style="width:14px;height:1.5px;background:var(--ink)"></span><span style="width:14px;height:1.5px;background:var(--ink)"></span></button></sc-if>
+  </div>
+</header>
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+<div style="position:fixed;inset:0;z-index:40;background:var(--bg);color:var(--ink);display:flex;flex-direction:column;padding:20px;box-sizing:border-box">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:16px;border-bottom:1px solid var(--line)"><span style="font-size:22px;letter-spacing:-.03em"><b style="font-weight:800">BALANCE</b><span style="font-weight:300">DESIGN</span></span><button onClick="{{ closeMenu }}" aria-label="關閉選單" style="width:34px;height:34px;border:1px solid var(--line2);border-radius:50%;background:transparent;color:var(--ink);font:inherit;font-size:18px;line-height:1;cursor:pointer">×</button></div>
+  <div style="display:flex;flex-direction:column;margin-top:12px">
+    <sc-for list="{{ menuItems }}" as="m" hint-placeholder-count="8"><a href="{{ m.href }}" onClick="{{ closeMenu }}" style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)"><span style="font-family:'IBM Plex Mono';font-size:12px;color:var(--mut)">{{ m.no }}</span><span style="font-size:26px;font-weight:700;font-stretch:85%">{{ m.en }}</span><span style="font-size:15px">{{ m.zh }}</span></a></sc-for>
+  </div>
+  <div style="margin-top:auto;font-size:14px;line-height:1.8;color:var(--mut2)">office_tpe@baldesign.net<br>(02) 2308 8288</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ heroFull }}" hint-placeholder-val="{{ true }}">
+<section id="top" style="display:flex;flex-direction:column;justify-content:space-between;gap:clamp(24px,4vh,48px);padding:clamp(28px,4vw,64px) clamp(20px,4vw,64px) clamp(28px,3.5vw,56px);min-height:min(calc(100vh - 64px),56.25vw);box-sizing:border-box;border-bottom:1px solid var(--line)">
+  <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:'IBM Plex Mono';font-size:13px;letter-spacing:.12em;color:var(--mut)"><span>SPACE DESIGN &amp; IMPLEMENTATION</span><span style="display:flex;gap:18px"><span>TAIPEI <span style="color:var(--ink)">{{ tTpe }}</span></span><span>YOKOHAMA <span style="color:var(--ink)">{{ tJp }}</span></span></span></div>
+  <div style="display:flex;flex-direction:column;gap:clamp(20px,2.6vw,36px)">
+    <h1 aria-label="BALANCE DESIGN" style="margin:0;font-size:clamp(44px,11.6vw,232px);line-height:.82;letter-spacing:-.05em;font-stretch:88%;white-space:nowrap;display:flex;cursor:default;user-select:none"><sc-for list="{{ letters }}" as="l" hint-placeholder-count="13"><span style="display:inline-block;clip-path:inset(-50% -50% 0 -50%);padding-bottom:.06em;margin-bottom:-.06em"><span style="display:inline-block;font-weight:{{ l.w }};animation:bdRise 1.3s cubic-bezier(.22,.61,.24,1) {{ l.d }}ms both">{{ l.ch }}</span></span></sc-for></h1>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+      <a href="#portfolio" style="display:flex;align-items:center;gap:10px;background:var(--ink);color:var(--bg);padding:14px 22px;font-size:15px;transition:background .25s,color .25s" style-hover="background:#FAF500;color:#161616;opacity:1">看作品案例 <span style="display:inline-block;transition:transform .25s">→</span></a>
+      <a href="#contact" style="border:1px solid var(--ink);padding:14px 22px;font-size:15px;transition:background .25s,color .25s" style-hover="background:var(--ink);color:var(--bg);opacity:1">聯絡我們</a>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:28px 48px;border-top:2px solid var(--ink);padding-top:clamp(28px,3.4vw,52px);align-items:start">
+    <p style="margin:0;font-size:clamp(14px,1.3vw,19px);line-height:1.8;text-wrap:pretty"><span style="white-space:{{ nw }}">以服務品牌企業 <b style="background:linear-gradient(transparent 55%,var(--hlbg) 55%);color:var(--hl)">空間設計</b> 及 <b style="background:linear-gradient(transparent 55%,var(--hlbg) 55%);color:var(--hl)">工程執行</b> 為主的設計公司。</span><br><span style="white-space:{{ nw }}">從需求、圖面到施工結案，同一個團隊負責到底。</span></p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:4px 24px">
+      <sc-for list="{{ heroSvc }}" as="v" hint-placeholder-count="6"><div style="display:flex;align-items:baseline;gap:10px;padding:6px 0;white-space:nowrap;border-bottom:1px solid var(--line)"><span style="font-family:'IBM Plex Mono';font-size:11px;color:var(--mut)">{{ v.no }}</span><span style="font-size:16px;font-weight:700">{{ v.en }}</span><span style="font-size:14px;color:var(--mut2);margin-left:auto">{{ v.zh }}</span></div></sc-for>
+    </div>
+  </div>
+</section>
+</sc-if>
+<sc-if value="{{ heroSvcOn }}" hint-placeholder-val="{{ false }}">
+<section id="top" style="display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);min-height:min(calc(100vh - 64px),56.25vw);box-sizing:border-box;border-bottom:1px solid var(--line)">
+  <div style="padding:clamp(28px,4vw,72px) clamp(20px,3.5vw,56px);display:flex;flex-direction:column;justify-content:space-between;gap:24px;border-right:1px solid var(--line)">
+    <span style="font-family:'IBM Plex Mono';font-size:13px;letter-spacing:.12em;color:var(--mut)">SPACE DESIGN &amp; IMPLEMENTATION — TAIPEI · YOKOHAMA</span>
+    <div>
+      <h1 style="margin:0;font-size:clamp(48px,7vw,128px);line-height:.88;letter-spacing:-.045em;font-stretch:88%"><span style="font-weight:800">BALANCE</span><br><span style="font-weight:300">DESIGN</span></h1>
+      <p style="margin:24px 0 0;font-size:clamp(15px,1.3vw,21px);line-height:1.7;max-width:520px;text-wrap:pretty">以服務品牌企業 <b style="background:linear-gradient(transparent 55%,var(--hlbg) 55%);color:var(--hl)">空間設計</b> 及 <b style="background:linear-gradient(transparent 55%,var(--hlbg) 55%);color:var(--hl)">工程執行</b> 為主的設計公司。從需求、圖面到施工結案，同一個團隊負責到底。</p>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap"><a href="#portfolio" style="background:var(--ink);color:var(--bg);padding:14px 24px;font-size:15px">看作品案例 →</a><a href="#contact" style="border:1px solid var(--ink);padding:14px 24px;font-size:15px">聯絡我們</a></div>
+  </div>
+  <div style="padding:clamp(28px,4vw,72px) clamp(20px,3.5vw,56px);display:flex;flex-direction:column;justify-content:space-between;gap:24px">
+    <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:'IBM Plex Mono';font-size:13px;color:var(--mut)"><span>03 — MAIN BUSINESS 主要業務</span><span>BRAND 品牌 · ENTERPRISE 企業</span></div>
+    <div style="border-top:2px solid var(--ink)">
+      <sc-for list="{{ heroSvc }}" as="v" hint-placeholder-count="6">
+        <a href="#business" style="display:grid;grid-template-columns:56px minmax(0,1fr) auto;align-items:baseline;gap:12px;padding:clamp(10px,1.4vw,20px) 8px;border-bottom:1px solid var(--line2)" style-hover="background:#FAF500;color:#161616;color:#161616;opacity:1">
+          <span style="font-family:'IBM Plex Mono';font-size:12px">{{ v.no }}</span>
+          <span style="font-size:clamp(26px,3.2vw,52px);font-weight:600;line-height:1;font-stretch:85%;letter-spacing:-.01em">{{ v.en }}</span>
+          <span style="font-size:clamp(14px,1.2vw,18px)">{{ v.zh }}</span>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</section>
+</sc-if>
+<sc-if value="{{ heroFacts }}" hint-placeholder-val="{{ false }}">
+<section id="top" style="display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);min-height:min(calc(100vh - 64px),56.25vw);box-sizing:border-box;border-bottom:1px solid var(--line)">
+  <div style="padding:clamp(28px,4vw,72px) clamp(20px,3.5vw,56px);display:flex;flex-direction:column;justify-content:space-between;gap:24px;border-right:1px solid var(--line)">
+    <span style="font-family:'IBM Plex Mono';font-size:13px;letter-spacing:.12em;color:var(--mut)">SPACE DESIGN &amp; IMPLEMENTATION — TAIPEI · YOKOHAMA</span>
+    <div>
+      <h1 style="margin:0;font-size:clamp(48px,7vw,128px);line-height:.88;letter-spacing:-.045em;font-stretch:88%"><span style="font-weight:800">BALANCE</span><br><span style="font-weight:300">DESIGN</span></h1>
+      <p style="margin:24px 0 0;font-size:clamp(15px,1.3vw,21px);line-height:1.7;max-width:520px;text-wrap:pretty">以服務品牌企業 <b style="background:linear-gradient(transparent 55%,var(--hlbg) 55%);color:var(--hl)">空間設計</b> 及 <b style="background:linear-gradient(transparent 55%,var(--hlbg) 55%);color:var(--hl)">工程執行</b> 為主的設計公司。從需求、圖面到施工結案，同一個團隊負責到底。</p>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap"><a href="#portfolio" style="background:var(--ink);color:var(--bg);padding:14px 24px;font-size:15px">看作品案例 →</a><a href="#contact" style="border:1px solid var(--ink);padding:14px 24px;font-size:15px">聯絡我們</a></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:1fr 1fr auto">
+    <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4">
+      <div style="padding:clamp(20px,3vw,48px);border-bottom:1px solid var(--line);border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:16px">
+        <span style="font-family:'IBM Plex Mono';font-size:12px;color:var(--mut)">{{ f.k }}</span>
+        <div style="display:flex;align-items:last baseline;gap:14px"><span style="font-size:clamp(72px,9vw,168px);font-weight:300;line-height:.8;font-stretch:80%;letter-spacing:-.03em">{{ f.v }}</span><span style="font-size:clamp(14px,1.3vw,19px);line-height:1.5"><b style="background:linear-gradient(transparent 55%,var(--hlbg) 55%);color:var(--hl)">{{ f.l }}</b><br><span style="color:var(--mut)">{{ f.s }}</span></span></div>
+      </div>
+    </sc-for>
+    <div style="grid-column:1 / -1;padding:16px clamp(20px,3vw,48px);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px"><span>office_tpe@baldesign.net</span><span style="font-family:'IBM Plex Mono';font-size:13px;color:var(--mut)">TEL (02) 2308 8288</span></div>
+  </div>
+</section>
+</sc-if>
+
+<section id="about" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));border-bottom:1px solid var(--line)">
+  <div style="position:relative;min-height:clamp(260px,34vw,480px);overflow:hidden"><img src="photos/site/about.jpg" alt="二半設計辦公室" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
+  <div style="padding:clamp(40px,4.6vw,80px) clamp(20px,4vw,64px);display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;gap:12px 16px;align-items:center;white-space:nowrap"><span style="background:#FAF500;color:#161616;font-family:'IBM Plex Mono';font-size:14px;padding:3px 8px">01 — ABOUT US</span><span style="font-size:15px">關於我們</span></div>
+    <div style="display:flex;flex-direction:column;align-items:{{ coAlign }};text-align:{{ coText }}"><div style="font-size:{{ coFs }};letter-spacing:-.03em;line-height:1.05;white-space:nowrap"><b style="font-weight:800">BALANCE</b><span style="font-weight:300">DESIGN CO., LTD.</span></div><div style="margin-top:14px;font-size:clamp(18px,1.6vw,24px);letter-spacing:.12em">二半空間室內裝修設計有限公司</div></div>
+    <div style="display:grid;grid-template-columns:{{ aboutCols }};row-gap:{{ aboutGap }};font-size:clamp(15px,1.3vw,17px);line-height:1.55;border-top:2px solid var(--ink);padding-top:24px">
+      <span style="font-family:'IBM Plex Mono';font-size:13px;color:var(--mut);padding-top:{{ labPad }}">TEL</span><span>(02) 2308 8288</span>
+      <span style="font-family:'IBM Plex Mono';font-size:13px;color:var(--mut);padding-top:{{ labPad }}">E-MAIL</span><span>office_tpe@baldesign.net</span>
+      <span style="font-family:'IBM Plex Mono';font-size:13px;color:var(--mut);padding-top:{{ labPad }}">統一編號</span><span>83630187</span>
+      <span style="font-family:'IBM Plex Mono';font-size:13px;color:var(--mut);padding-top:{{ labPad }}">TAIWAN</span><span style="white-space:nowrap;font-size:{{ addrFs }}">108 台北市萬華區和平西路三段302巷2-8號1樓</span>
+      <span style="font-family:'IBM Plex Mono';font-size:13px;color:var(--mut);padding-top:{{ labPad }}">JAPAN</span><span style="white-space:nowrap;font-size:{{ addrFs }}">〒221-0065 神奈川県横浜市神奈川区白楽92-10</span>
+    </div>
+  </div>
+</section>
+
+<section id="org" style="padding:clamp(40px,4.6vw,80px) clamp(20px,4vw,64px);border-bottom:1px solid var(--line)">
+  <div style="display:flex;gap:12px 16px;align-items:center;white-space:nowrap"><span style="background:#FAF500;color:#161616;font-family:'IBM Plex Mono';font-size:14px;padding:3px 8px">02 — ORGANIZATION CHART</span><span style="font-size:15px">組織架構</span></div>
+  <h2 style="margin:{{ h2a }};font-size:clamp(28px,4vw,64px);font-weight:300;letter-spacing:-.02em;white-space:nowrap">四個部門，<b style="font-weight:700">一個窗口。</b></h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:32px">
+    <sc-for list="{{ org }}" as="o" hint-placeholder-count="4">
+      <div style="border-top:2px solid var(--ink);padding-top:20px;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:16px">
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <span style="font-size:26px;font-weight:700;line-height:1.1">{{ o.zh }}</span>
+          <span style="font-size:18px;font-weight:700;font-stretch:85%;letter-spacing:.02em">{{ o.en }}</span>
+          <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px"><sc-for list="{{ o.duties }}" as="d" hint-placeholder-count="3"><span style="display:flex;align-items:center;gap:10px;font-size:16px;color:var(--mut2)"><span style="width:6px;height:6px;border-radius:50%;background:var(--ink);flex:none"></span>{{ d }}</span></sc-for></div>
+        </div>
+        <span style="font-size:64px;font-weight:300;line-height:.8;font-stretch:80%;white-space:nowrap">{{ o.n }}<span style="font-size:18px">人</span></span>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="business" style="padding:clamp(40px,4.6vw,80px) clamp(20px,4vw,64px);border-bottom:1px solid var(--line)">
+  <div style="display:flex;gap:12px 16px;align-items:center;white-space:nowrap"><span style="background:#FAF500;color:#161616;font-family:'IBM Plex Mono';font-size:14px;padding:3px 8px">03 — MAIN BUSINESS</span><span style="font-size:15px">主要業務</span></div>
+  <h2 style="margin:{{ h2a }};font-size:clamp(28px,4vw,64px);font-weight:300;letter-spacing:-.02em;white-space:nowrap">空間設計 &amp; <b style="font-weight:700">工程施作。</b></h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:40px">
+    <sc-for list="{{ biz }}" as="b" hint-placeholder-count="2">
+      <div style="border-top:2px solid var(--ink)">
+        <div style="display:flex;align-items:baseline;gap:14px;padding:18px 0"><span style="font-size:34px;font-weight:700;font-stretch:85%">{{ b.en }}</span><span style="font-size:18px">{{ b.zh }}</span></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:10px">
+          <sc-for list="{{ b.items }}" as="i" hint-placeholder-count="3"><div style="background:#FAF500;color:#161616;padding:18px 16px;display:flex;flex-direction:column;gap:4px"><span style="font-size:clamp(16px,1.5vw,20px);font-weight:700">{{ i.en }}</span><span style="font-size:16px">{{ i.zh }}</span></div></sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="area" style="padding:clamp(40px,4.6vw,80px) clamp(20px,4vw,64px);border-bottom:1px solid var(--line)">
+  <div style="display:flex;gap:12px 16px;align-items:center;white-space:nowrap"><span style="background:#FAF500;color:#161616;font-family:'IBM Plex Mono';font-size:14px;padding:3px 8px">04 — SERVICE AREA</span><span style="font-size:15px">服務區域</span></div>
+  <h2 style="margin:{{ h2b }};font-size:clamp(28px,4vw,64px);font-weight:300;letter-spacing:-.02em;white-space:nowrap">北、中、南，<b style="font-weight:700">全台服務。</b></h2>
+  <div style="border-top:2px solid var(--ink)">
+    <sc-for list="{{ regions }}" as="r" hint-placeholder-count="3">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 40px;padding:18px 0;border-bottom:1px solid var(--line2)">
+                <span style="min-width:min(100%,300px);font-size:clamp(32px,3.2vw,52px);font-weight:700;line-height:1;font-stretch:75%;letter-spacing:-.02em">{{ r.en }}</span>
+        <span style="font-size:17px;letter-spacing:.06em;color:var(--mut3)">{{ r.cities }}</span>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="vendor" style="padding:clamp(40px,4.6vw,80px) clamp(20px,4vw,64px);border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr);gap:0">
+  <div>
+    <div style="display:flex;gap:12px 16px;align-items:center;white-space:nowrap"><span style="background:#FAF500;color:#161616;font-family:'IBM Plex Mono';font-size:14px;padding:3px 8px">05 — OUR VENDOR</span><span style="font-size:15px">廠商類型及服務區域</span></div>
+    <h2 style="margin:{{ h2a }};font-size:clamp(24px,4vw,64px);font-weight:300;letter-spacing:-.02em;white-space:nowrap">八大工種，<b style="font-weight:700">長期合作分包商。</b></h2>
+    
+  </div>
+  <div style="grid-column:1 / -1;min-width:0">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding-bottom:14px;border-bottom:2px solid var(--ink)">
+      <span style="font-family:'IBM Plex Mono';font-size:12px;letter-spacing:.08em;color:var(--mut)">SUBCONTRACTOR × BASE × SERVICE AREA</span>
+      <div style="display:flex;gap:18px;font-size:13px;color:var(--mut2)"><span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;background:var(--ink)"></span>全台服務</span><span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border:1px solid var(--ink);box-sizing:border-box"></span>區域服務</span></div>
+    </div>
+    <sc-if value="{{ desk }}" hint-placeholder-val="{{ true }}"><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));border-left:1px solid var(--line2)">
+      <sc-for list="{{ vendors }}" as="v" hint-placeholder-count="8">
+        <div style="border-right:1px solid var(--line2);border-bottom:1px solid var(--line2);padding:clamp(18px,2vw,28px);display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
+            <div style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.08em;color:var(--mut)">{{ v.no }} — {{ v.en }}</span><span style="font-size:clamp(24px,2vw,30px);font-weight:700;line-height:1.1">{{ v.zh }}</span></div>
+            <div style="display:flex;align-items:last baseline;gap:4px;flex:none"><span style="font-size:clamp(40px,3.6vw,56px);font-weight:300;line-height:.8;font-stretch:80%">{{ v.total }}</span><span style="font-size:13px">家</span></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;padding-top:14px;border-top:1px solid var(--line)">
+            <sc-for list="{{ v.rows }}" as="r" hint-placeholder-count="1">
+              <div style="display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:10px;font-size:14px;line-height:1.4">
+                <span style="font-size:12px;padding:3px 8px;background:{{ r.chipBg }};color:{{ r.chipFg }};border:1px solid var(--ink);white-space:nowrap">{{ r.base }}</span>
+                <span style="color:var(--mut3)">{{ r.area }}</span>
+                <span style="font-family:'IBM Plex Mono';font-size:12px;color:var(--mut)">×{{ r.n }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+</sc-if>
+    <sc-if value="{{ mob }}" hint-placeholder-val="{{ false }}"><div style="display:flex;flex-direction:column">
+      <sc-for list="{{ vendors }}" as="v" hint-placeholder-count="8">
+        <div style="border-bottom:1px solid var(--line2)">
+          <button onClick="{{ v.toggle }}" style="all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:14px;padding:14px 0;cursor:pointer;color:var(--ink)">
+            <div style="display:flex;flex-direction:column;gap:2px"><span style="font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.08em;color:var(--mut)">{{ v.no }} — {{ v.en }}</span><span style="font-size:22px;font-weight:700;line-height:1.2">{{ v.zh }}</span></div>
+            <div style="display:flex;align-items:last baseline;gap:3px"><span style="font-size:34px;font-weight:300;line-height:.8;font-stretch:80%">{{ v.total }}</span><span style="font-size:12px">家</span></div>
+            <span style="width:30px;height:30px;border:1px solid var(--line2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:300;line-height:1;transform:rotate({{ v.rot }});transition:transform .3s">+</span>
+          </button>
+          <sc-if value="{{ v.open }}" hint-placeholder-val="{{ false }}"><div style="padding:0 0 16px;display:flex;flex-direction:column;gap:8px">
+            <sc-for list="{{ v.rows }}" as="r" hint-placeholder-count="1">
+              <div style="display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:10px;font-size:14px;line-height:1.4">
+                <span style="font-size:12px;padding:3px 8px;background:{{ r.chipBg }};color:{{ r.chipFg }};border:1px solid var(--ink);white-space:nowrap">{{ r.base }}</span>
+                <span style="color:var(--mut3)">{{ r.area }}</span>
+                <span style="font-family:'IBM Plex Mono';font-size:12px;color:var(--mut)">×{{ r.n }}</span>
+              </div>
+            </sc-for>
+          </div></sc-if>
+        </div>
+      </sc-for>
+    </div></sc-if>
+  </div>
+</section>
+
+<section id="sop" style="padding:clamp(40px,4.6vw,80px) clamp(20px,4vw,64px);border-bottom:1px solid var(--line)">
+  <div style="display:flex;gap:12px 16px;align-items:center;white-space:nowrap"><span style="background:#FAF500;color:#161616;font-family:'IBM Plex Mono';font-size:14px;padding:3px 8px">06 — SOP</span><span style="font-size:15px">專案執行標準作業程序</span></div>
+  <h2 style="margin:{{ h2a }};font-size:clamp(24px,4vw,64px);font-weight:300;letter-spacing:-.02em;white-space:nowrap">六個步驟，<b style="font-weight:700">從需求到結案。</b></h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:28px clamp(16px,2vw,32px)">
+    <sc-for list="{{ sop }}" as="s" hint-placeholder-count="6">
+      <div style="border-top:4px solid var(--ink);padding:18px 0 0;display:grid;grid-template-columns:{{ sopCols }};gap:14px 16px;align-items:start;align-content:start;min-width:0">
+        <div style="display:flex;flex-direction:column;gap:6px;min-width:0">
+          <span style="font-family:'IBM Plex Mono';font-size:13px;color:var(--mut)">{{ s.no }} / {{ s.dept }}</span>
+          <span style="font-size:{{ sopEnFs }};font-weight:700;font-stretch:85%;white-space:nowrap">{{ s.en }}</span>
+          <span style="font-size:18px;background:linear-gradient(transparent 55%,var(--hlbg) 55%);color:var(--hl);align-self:flex-start">{{ s.zh }}</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;padding-top:{{ stepPt }}"><sc-for list="{{ s.steps }}" as="t" hint-placeholder-count="4"><span style="display:flex;align-items:center;gap:10px;font-size:16px;color:var(--mut3)"><span style="width:6px;height:6px;border-radius:50%;background:var(--ink);flex:none"></span>{{ t }}</span></sc-for></div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="portfolio" style="padding:clamp(40px,4.6vw,80px) clamp(20px,4vw,64px)">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px">
+    <div><div style="display:flex;gap:12px 16px;align-items:center;white-space:nowrap"><span style="background:#FAF500;color:#161616;font-family:'IBM Plex Mono';font-size:14px;padding:3px 8px">07 — PORTFOLIO</span><span style="font-size:15px">實作案例</span></div><h2 style="margin:{{ h2c }};font-size:clamp(28px,4vw,64px);font-weight:700;letter-spacing:-.02em">精選作品 <span style="font-weight:300;font-size:.55em;font-family:'IBM Plex Mono'">{{ count }}</span></h2></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <sc-for list="{{ cats }}" as="c" hint-placeholder-count="4"><button onClick="{{ c.pick }}" style="font:inherit;font-size:16px;padding:10px 18px;cursor:pointer;border:1px solid var(--ink);background:{{ c.bg }};color:{{ c.fg }}">{{ c.label }}</button></sc-for>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:40px 24px">
+    <sc-for list="{{ shown }}" as="p" hint-placeholder-count="9">
+      <div onClick="{{ p.open }}" style="cursor:pointer;display:flex;flex-direction:column;gap:12px">
+        <div style="aspect-ratio:3/2;overflow:hidden;background:var(--ph)"><img src="{{ p.cover }}" alt="{{ p.name }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s" style-hover="transform:scale(1.04)"></div>
+        <div style="border-top:1px solid var(--ink);padding-top:10px;display:flex;justify-content:space-between;gap:12px;align-items:baseline"><span style="font-size:19px;font-weight:700">{{ p.name }}</span><span style="font-family:'IBM Plex Mono';font-size:12px;color:var(--mut);white-space:nowrap">{{ p.cat }}</span></div>
+        <span style="font-size:15px;color:var(--mut2);margin-top:-6px">{{ p.loc }}</span>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<footer id="contact" style="background:#161616;color:#f3f1ec;padding:clamp(32px,3vw,48px) clamp(20px,4vw,64px) 24px;display:grid;grid-template-columns:{{ footCols }};justify-content:space-between;align-items:start;gap:24px clamp(20px,3vw,56px)">
+  <div style="margin-right:auto"><div style="font-size:clamp(26px,2.4vw,36px);font-weight:300;line-height:1.15;margin-top:-.1em">一起打造<br><b style="font-weight:700;color:#FAF500">你的空間。</b></div><a href="mailto:office_tpe@baldesign.net" style="display:inline-block;margin-top:14px;font-size:17px;border-bottom:1px solid #FAF500">office_tpe@baldesign.net</a></div>
+  <div style="font-size:clamp(12px,1.3vw,15px);line-height:1.7;color:#d8d4cb"><div style="font-family:'IBM Plex Mono';font-size:13px;color:#FAF500;margin-bottom:8px;line-height:1">TAIWAN 台北</div><span style="white-space:{{ ws }}">108 台北市萬華區和平西路三段302巷2-8號1樓</span><br>TEL (02) 2308 8288</div>
+  <div style="font-size:clamp(12px,1.3vw,15px);line-height:1.7;color:#d8d4cb"><div style="font-family:'IBM Plex Mono';font-size:13px;color:#FAF500;margin-bottom:8px;line-height:1">JAPAN 横浜</div><span style="white-space:{{ ws }}">〒221-0065 神奈川県横浜市神奈川区白楽92-10</span></div>
+  <div style="grid-column:1 / -1;border-top:1px solid #ffffff26;padding-top:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#8d8a83"><span><b style="color:#f3f1ec">BALANCE</b>DESIGN Co., Ltd. All rights reserved.</span><span>二半空間室內裝修設計有限公司</span></div>
+</footer>
+
+<sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ close }}" style="position:fixed;inset:0;z-index:50;background:#111111f2;color:#f3f1ec;display:flex;flex-direction:column;padding:24px clamp(16px,3vw,48px);gap:16px">
+    <div onClick="{{ stop }}" style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap">
+      <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap"><span style="background:#FAF500;color:#111;font-family:'IBM Plex Mono';font-size:13px;padding:2px 8px">{{ lb.cat }}</span><span style="font-size:clamp(22px,2.4vw,36px);font-weight:700">{{ lb.name }}</span><span style="font-size:16px;color:#bdb9b0">{{ lb.loc }}</span></div>
+      <button onClick="{{ close }}" style="font:inherit;font-size:15px;background:none;border:1px solid #f3f1ec;color:#f3f1ec;padding:8px 16px;cursor:pointer">關閉 ESC</button>
+    </div>
+    <div onClick="{{ stop }}" style="flex:1;min-height:0;display:flex;align-items:center;justify-content:center">{{ lbImg }}</div>
+    <div onClick="{{ stop }}" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+      <button onClick="{{ prev }}" style="font:inherit;font-size:15px;background:none;border:none;color:#f3f1ec;cursor:pointer;padding:8px 0">← 上一案</button>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center">{{ lbThumbEls }}</div>
+      <button onClick="{{ next }}" style="font:inherit;font-size:15px;background:none;border:none;color:#f3f1ec;cursor:pointer;padding:8px 0">下一案 →</button>
+    </div>
+  </div>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;heroLayout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;整合排版&quot;,&quot;服務索引&quot;,&quot;數據亮點&quot;],&quot;default&quot;:&quot;整合排版&quot;,&quot;tsType&quot;:&quot;'整合排版'|'服務索引'|'數據亮點'&quot;,&quot;section&quot;:&quot;首頁&quot;}}">
+class Component extends DCLogic {
+  state = { cat: 'ALL', open: -1, ph: 0, night: (() => { try { return localStorage.getItem('bd-theme') === 'night'; } catch (e) { return false; } })() };
+  extras = {17:2,18:2,19:4,20:3,21:2,22:3,23:2,24:2,25:2,26:2,27:2,28:2,29:2,30:2,31:4};
+  raw = [
+    [17,'B','NATIONAL GEOGRAPHIC','台北 · 信義威秀'],[18,'B','BOSE','台南 · 台南遠百'],[19,'B','rom&nd — PINK OFFICE','台北 · UR LIVING 南西店'],[20,'B',"O'right",'台南 · 南紡夢時代'],
+    [21,'B','OB 嚴選','桃園 · 統領廣場'],[22,'B','LUSH','台北 · 新光南西三館'],[23,'B','Benefit','高雄 · 漢神巨蛋'],[24,'B','TAKASHIMA 高島','新竹 · 竹北大遠百'],
+    [25,'B','ENRICH','台北 · 西門誠品'],[26,'B','NATIONAL GEOGRAPHIC','台中 · 三井 LaLaport'],[27,'B','PITAKA','台北 · 武昌誠品'],[28,'B','SUNDAY by VODA SWIM','台北 · 信義大遠百 A13'],
+    [29,'B','Ecua Andino Hats','台北 · 新光南西三館'],[30,'B','VODA SWIM','台北 · 南西誠品'],[31,'B','BODY GOALS','台北 · 信義誠品'],[32,'B','BRIGITTE ERMEL','台北 · 香格里拉遠東國際大飯店'],
+    [33,'B','BLANK PLAN 留白計畫','台中'],[34,'B','台灣電力公司','台北 · 綜研所綠能貨櫃屋'],
+    [36,'E','外交部 — 捷克經濟文化辦事處','台南 · 臺南美術館一館'],[37,'E','Tōmonchō 東門町','嘉義'],[38,'E','X-iSLAND ReBORN 龜山植藝實驗所','桃園'],[39,'E','SAMSUNG','台北 · 台北家電展'],
+    [40,'E','OOLO','台北 · 台北自行車展'],[41,'E','LUMI','台北 · INNOVEX 台北國際電腦展'],[42,'E','客家電視台','桃園 · 客家博覽會'],[43,'E','NEXTDRIVE','台北 · 智慧能源展'],
+    [44,'E','EVERLIGHT CHEMICAL','台北 · 智慧顯示展'],[45,'E','NEXTDRIVE','台北 · 智慧能源展'],[46,'E','ZAU','台北 · 台北自行車展'],[47,'E','SHIMANO','台北 · 台北自行車展'],
+    [48,'E','NEXTDRIVE','台北 · 智慧能源週'],[49,'E','SANJET','台北 · 台灣國際工具機展'],[50,'E','DEX','台北 · 台灣國際工具機展'],[51,'E','ASPEED','台北 · COMPUTEX 台北國際電腦展'],
+    [52,'E','NEXTDRIVE','台北 · INNOVEX 台北國際電腦展'],
+    [54,'J','CENTRAL MUSICAL INSTRUMENTAL','横浜 Yokohama'],[55,'J','COFFEE GALLERY','熊本 Kumamoto'],[56,'J','MUNSELL FLORAL SHOP','東京 Tokyo'],[57,'J','NOON Bistro','東京 Tokyo'],[58,'J','BIG BABY ICE CREAM','東京 Tokyo'],[59,'J','PARLOR Bistro','東京 Tokyo']];
+  catName = { B: 'BRAND 品牌', E: 'EXHIBITION 展覽', J: 'JAPAN 日本' };
+  projects = this.raw.map(([pg, c, name, loc]) => ({ name, loc, catKey: c, cat: this.catName[c], photos: Array.from({ length: this.extras[pg] || 1 }, (_, i) => `photos/p${pg}_${i}.jpg`) }));
+  componentDidMount() {
+    this.onKey = e => { if (this.state.open < 0) return; if (e.key === 'Escape') this.setState({ open: -1 }); if (e.key === 'ArrowRight') this.step(1); if (e.key === 'ArrowLeft') this.step(-1); };
+    window.addEventListener('keydown', this.onKey);
+    const fixPh = () => { if (window.BD_PHOTOS) { this.projects.forEach(p => { p.photos = p.photos.map(x => window.BD_PHOTOS[x] || x); }); this.forceUpdate(); } else setTimeout(fixPh, 100); }; fixPh();
+    document.body.classList.toggle('bd-night', this.state.night);
+    const K = { BRAND: 'B', EXHIBITION: 'E', JAPAN: 'J' };
+    fetch('content/projects.json').then(r => r.ok ? r.json() : Promise.reject()).then(d => {
+      const list = (d.projects || []).filter(p => p && p.title && (p.photos || []).length);
+      if (!list.length) return;
+      this.projects = list.map(p => { const k = K[p.category] || 'B'; return { name: p.title, loc: p.location || '', catKey: k, cat: this.catName[k], photos: p.photos.map(x => (window.BD_PHOTOS && window.BD_PHOTOS[x]) || x) }; });
+      this.forceUpdate();
+    }).catch(() => {});
+    this.onRs = () => { const m = window.innerWidth < 720; if (m !== this.state.mob) this.setState({ mob: m }); }; this.onRs(); window.addEventListener('resize', this.onRs);
+    this.tick = () => { const f = tz => new Date().toLocaleTimeString('en-GB', { timeZone: tz, hour: '2-digit', minute: '2-digit' }); this.setState({ tTpe: f('Asia/Taipei'), tJp: f('Asia/Tokyo') }); };
+    this.tick(); this.clock = setInterval(this.tick, 20000);
+  }
+  componentWillUnmount() { window.removeEventListener('keydown', this.onKey); clearInterval(this.clock); window.removeEventListener('resize', this.onRs); }
+  list() { const c = this.state.cat; return this.projects.filter(p => c === 'ALL' || p.catKey === c); }
+  step(d) { const L = this.list(); const i = L.indexOf(this.projects[this.state.open]); const n = L[(i + d + L.length) % L.length]; this.setState({ open: this.projects.indexOf(n), ph: 0 }); }
+  renderVals() {
+    const { cat, open, ph, night } = this.state; const mob = !!this.state.mob; const ov = this.state.openV || {};
+    const shown = this.list().map(p => ({ ...p, cover: p.photos[0], open: () => this.setState({ open: this.projects.indexOf(p), ph: 0 }) }));
+    const lb = open >= 0 ? this.projects[open] : { name: '', loc: '', cat: '', photos: [] };
+    return {
+      org: [['PROJECT','業務部',3,['專案需求分析','現場場勘丈量','專案規劃排程']],['DESIGN','設計部',3,['設計創意發想','各式圖面繪製']],['ENGINEERING','工務部',2,['圖紙結構審核','工程安全評估','工地監工督導']],['FINANCE','財務部',1,['提供專案合約','代收代付服務','各式款項流程']]].map(([en,zh,n,duties])=>({en,zh,n,duties})),
+      biz: [{en:'BRAND',zh:'品牌',items:[{en:'RETAIL',zh:'零售通路'},{en:'EVENT',zh:'展演活動'},{en:'POP-UP',zh:'快閃店鋪'}]},{en:'ENTERPRISE',zh:'企業',items:[{en:'OFFICE',zh:'辦公空間'},{en:'SHOWROOM',zh:'企業展間'},{en:'EXHIBITION',zh:'國際展覽'}]}],
+      regions: [{en:'NORTH',cities:'台北 / 新北 / 基隆 / 桃園 / 新竹 / 東部'},{en:'CENTRAL',cities:'苗栗 / 台中 / 彰化 / 南投'},{en:'SOUTH',cities:'雲林 / 嘉義 / 台南 / 高雄 / 屏東'}],
+      vendors: [['木作','CARPENTRY',[['台北',2,'全台'],['台北',1,'北北基桃'],['高雄',1,'全台']]],['水電','ELECTRICAL',[['台北',3,'北北基桃竹（東部）'],['台中',1,'苗中彰投'],['高雄',2,'雲嘉南高屏']]],['燈具','LIGHTING',[['台北',1,'全台']]],['油漆','PAINTING',[['台北',2,'全台'],['高雄',1,'全台']]],['地坪','FLOORING',[['台北',2,'全台']]],['招牌','SIGNATURE',[['台北',1,'全台']]],['美工','GRAPHIC',[['台北',2,'全台'],['台中',1,'苗中彰投雲'],['高雄',1,'嘉南高屏']]],['視聽','AUDIO-VISUAL',[['台北',1,'全台']]]].map(([zh,en,rows],i)=>({zh,en,no:String(i+1).padStart(2,'0'),total:rows.reduce((s,r)=>s+r[1],0),open:!!ov[i],rot:ov[i]?'45deg':'0deg',toggle:()=>this.setState(s=>({openV:{...(s.openV||{}),[i]:!(s.openV||{})[i]}})),rows:rows.map(([base,n,area])=>({base,n,area,chipBg:area==='全台'?'var(--ink)':'transparent',chipFg:area==='全台'?'var(--bg)':'var(--ink)'}))})),
+      sop: [['01','PROJECT','BRIEF','前置作業',['確認需求','場勘丈量','現況分析']],['02','DESIGN','DRAWING','圖面繪製',['參考圖片','平面配置圖','3D 透視圖','施工圖']],['03','PROJECT','QUOTATION','設計定案',['提案簡報','廠商估價','報價單','工程進度表','專案合約']],['04','PROJECT','APPLICATION','申請審核',['圖面審核','結構審核','保險申辦','進場名單','施工申請']],['05','ENGINEERING','CONSTRUCTION','工程施作',['複量放樣','發包製作','工廠看樣','道具採購','進場施工','完工查驗']],['06','FINANCE','PAYMENT','完工結案',['完工照','竣工審核','完工報告','請款流程','結案']]].map(([no,dept,en,zh,steps])=>({no,dept,en,zh,steps})),
+      cats: [['ALL','全部'],['B','品牌 BRAND'],['E','展覽 EXHIBITION'],['J','日本 JAPAN']].map(([k,label])=>({label,bg:k===cat?'#FAF500':'transparent',fg:k===cat?'#161616':'var(--ink)',pick:()=>this.setState({cat:k})})),
+      count: String(shown.length).padStart(2,'0') + ' PROJECTS',
+      shown,
+      heroFull: (this.props.heroLayout ?? '整合排版') === '整合排版', heroSvcOn: this.props.heroLayout === '服務索引', heroFacts: this.props.heroLayout === '數據亮點',
+      heroSvc: [['01','RETAIL','零售通路'],['02','EVENT','展演活動'],['03','POP-UP','快閃店鋪'],['04','OFFICE','辦公空間'],['05','SHOWROOM','企業展間'],['06','EXHIBITION','國際展覽']].map(([no,en,zh])=>({no,en,zh})),
+      facts: [{k:'TEAM',v:'9',l:'位專業成員',s:'業務 · 設計 · 工務 · 財務'},{k:'SPACE',v:'6',l:'類空間',s:'品牌與企業'},{k:'VENDOR',v:'8',l:'大合作工種',s:'北中南在地廠商'},{k:'BASE',v:'2',l:'個據點',s:'台北 · 横浜'}],
+      letters: 'BALANCEDESIGN'.split('').map((ch, i) => ({ ch, w: i < 7 ? 800 : 300, d: 120 + i * 55 })),
+      tTpe: this.state.tTpe || '', tJp: this.state.tJp || '',
+      mob, desk: !mob, nw: mob ? 'nowrap' : 'normal', footCols: mob ? 'minmax(0,1fr)' : 'auto auto auto', ws: mob ? 'normal' : 'nowrap',
+      coAlign: mob ? 'center' : 'flex-start', coText: mob ? 'center' : 'left', coFs: mob ? '26px' : 'clamp(32px,3.2vw,52px)',
+      aboutCols: mob ? 'minmax(0,1fr)' : 'clamp(76px,8vw,110px) minmax(0,1fr)', aboutGap: mob ? '2px' : '14px', labPad: mob ? '12px' : '3px', addrFs: mob ? '14px' : 'inherit',
+      h2a: mob ? '12px 0 24px' : '24px 0 48px', h2b: mob ? '12px 0 16px' : '24px 0 32px', h2c: mob ? '12px 0 0' : '24px 0 0',
+      sopCols: mob ? 'minmax(0,1fr) minmax(0,1fr)' : 'minmax(0,1fr)', stepPt: mob ? '2px' : '8px', sopEnFs: mob ? '20px' : '26px',
+      menuOpen: !!this.state.menu, openMenu: () => this.setState({ menu: true }), closeMenu: () => this.setState({ menu: false }),
+      menuItems: [['01','ABOUT','關於我們','#about'],['02','ORGANIZATION','組織架構','#org'],['03','BUSINESS','業務內容','#business'],['04','SERVICE AREA','服務區域','#area'],['05','VENDOR','合作廠商','#vendor'],['06','SOP','工作流程','#sop'],['07','PORTFOLIO','作品案例','#portfolio'],['—','CONTACT','聯絡我們','#contact']].map(([no,en,zh,href])=>({no,en,zh,href})),
+      isDay: !night, night, themeLabel: night ? '切換為日間模式' : '切換為夜間模式',
+      toggleTheme: () => { const n = !this.state.night; document.body.classList.toggle('bd-night', n); try { localStorage.setItem('bd-theme', n ? 'night' : 'day'); } catch (e) {} this.setState({ night: n }); },
+      lbOpen: open >= 0, lb,
+      lbImg: open >= 0 ? React.createElement('img', { key: lb.photos[ph], src: lb.photos[ph], alt: lb.name, style: { maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', display: 'block', animation: 'bdFade .6s ease' } }) : null,
+      lbThumbEls: lb.photos.length > 1 ? lb.photos.map((src, i) => React.createElement('img', { key: src, src, alt: '', onClick: () => this.setState({ ph: i }), style: { width: 96, height: 64, objectFit: 'cover', cursor: 'pointer', outline: i === ph ? '2px solid #FAF500' : 'none', outlineOffset: 2 } })) : null,
+      close: () => this.setState({ open: -1 }), stop: e => e.stopPropagation(),
+      prev: () => this.step(-1), next: () => this.step(1)
+    };
+  }
+}
+</script>
+</body>
+</html>

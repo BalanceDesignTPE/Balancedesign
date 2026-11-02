@@ -1,0 +1,33 @@
+media:
+  input: photos/projects
+  output: photos/projects
+
+content:
+  - name: projects
+    label: 作品集
+    type: file
+    path: content/projects.json
+    format: json
+    fields:
+      - name: projects
+        label: 作品
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: 案名
+            type: string
+            required: true
+          - name: location
+            label: 地點
+            type: string
+          - name: category
+            label: 類別
+            type: select
+            options:
+              values: [BRAND, EXHIBITION, JAPAN]
+          - name: photos
+            label: 照片（第一張為封面，可拖曳排序）
+            type: image
+            options:
+              multiple: true

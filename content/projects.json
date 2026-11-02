@@ -1,0 +1,353 @@
+{
+  "projects": [
+    {
+      "title": "NATIONAL GEOGRAPHIC",
+      "location": "台北 · 信義威秀",
+      "category": "BRAND",
+      "photos": [
+        "photos/projects/01-national-geographic/01.jpg",
+        "photos/projects/01-national-geographic/02.jpg"
+      ]
+    },
+    {
+      "title": "BOSE",
+      "location": "台南 · 台南遠百",
+      "category": "BRAND",
+      "photos": [
+        "photos/projects/02-bose/01.jpg",
+        "photos/projects/02-bose/02.jpg"
+      ]
+    },
+    {
+      "title": "rom&nd — PINK OFFICE",
+      "location": "台北 · UR LIVING 南西店",
+      "category": "BRAND",
+      "photos": [
+        "photos/projects/03-romand-pink-office/01.jpg",
+        "photos/projects/03-romand-pink-office/02.jpg",
+        "photos/projects/03-romand-pink-office/03.jpg",
+        "photos/projects/03-romand-pink-office/04.jpg"
+      ]
+    },
+    {
+      "title": "O'right",
+      "location": "台南 · 南紡夢時代",
+      "category": "BRAND",
+      "photos": [
+        "photos/projects/04-o-right/01.jpg",
+        "photos/projects/04-o-right/02.jpg",
+        "photos/projects/04-o-right/03.jpg"
+      ]
+    },
+    {
+      "title": "OB 嚴選",
+      "location": "桃園 · 統領廣場",
+      "category": "BRAND",
+      "photos": [
+        "photos/projects/05-ob-selection/01.jpg",
+        "photos/projects/05-ob-selection/02.jpg"
+      ]
+    },
+    {
+      "title": "LUSH",
+      "location": "台北 · 新光南西三館",
+      "category": "BRAND",
+      "photos": [
+        "photos/projects/06-lush/01.jpg",
+        "photos/projects/06-lush/02.jpg",
+        "photos/projects/06-lush/03.jpg"
+      ]
+    },
+    {
+      "title": "Benefit",
+      "location": "高雄 · 漢神巨蛋",
+      "category": "BRAND",
+      "photos": [
+        "photos/projects/07-benefit/01.jpg",
+        "photos/projects/07-benefit/02.jpg"
+      ]
+    },
+    {
+      "title": "TAKASHIMA 高島",
+      "location": "新竹 · 竹北大遠百",
+      "category": "BRAND",
+      "photos": [
+        "photos/projects/08-takashima/01.jpg",
+        "photos/projects/08-takashima/02.jpg"
+      ]
+    },
+    {
+      "title": "ENRICH",
+      "location": "台北 · 西門誠品",
+      "category": "BRAND",
+      "photos": [
+        "photos/projects/09-enrich/01.jpg",
+        "photos/projects/09-enrich/02.jpg"
+      ]
+    },
+    {
+      "title": "NATIONAL GEOGRAPHIC",
+      "location": "台中 · 三井 LaLaport",
+      "category": "BRAND",
+      "photos": [
+        "photos/projects/10-national-geographic/01.jpg",
+        "photos/projects/10-national-geographic/02.jpg"
+      ]
+    },
+    {
+      "title": "PITAKA",
+      "location": "台北 · 武昌誠品",
+      "category": "BRAND",
+      "photos": [
+        "photos/projects/11-pitaka/01.jpg",
+        "photos/projects/11-pitaka/02.jpg"
+      ]
+    },
+    {
+      "title": "SUNDAY by VODA SWIM",
+      "location": "台北 · 信義大遠百 A13",
+      "category": "BRAND",
+      "photos": [
+        "photos/projects/12-sunday-by-voda-swim/01.jpg",
+        "photos/projects/12-sunday-by-voda-swim/02.jpg"
+      ]
+    },
+    {
+      "title": "Ecua Andino Hats",
+      "location": "台北 · 新光南西三館",
+      "category": "BRAND",
+      "photos": [
+        "photos/projects/13-ecua-andino-hats/01.jpg",
+        "photos/projects/13-ecua-andino-hats/02.jpg"
+      ]
+    },
+    {
+      "title": "VODA SWIM",
+      "location": "台北 · 南西誠品",
+      "category": "BRAND",
+      "photos": [
+        "photos/projects/14-voda-swim/01.jpg",
+        "photos/projects/14-voda-swim/02.jpg"
+      ]
+    },
+    {
+      "title": "BODY GOALS",
+      "location": "台北 · 信義誠品",
+      "category": "BRAND",
+      "photos": [
+        "photos/projects/15-body-goals/01.jpg",
+        "photos/projects/15-body-goals/02.jpg",
+        "photos/projects/15-body-goals/03.jpg",
+        "photos/projects/15-body-goals/04.jpg"
+      ]
+    },
+    {
+      "title": "BRIGITTE ERMEL",
+      "location": "台北 · 香格里拉遠東國際大飯店",
+      "category": "BRAND",
+      "photos": [
+        "photos/projects/16-brigitte-ermel/01.jpg"
+      ]
+    },
+    {
+      "title": "BLANK PLAN 留白計畫",
+      "location": "台中",
+      "category": "BRAND",
+      "photos": [
+        "photos/projects/17-blank-plan/01.jpg"
+      ]
+    },
+    {
+      "title": "台灣電力公司",
+      "location": "台北 · 綜研所綠能貨櫃屋",
+      "category": "BRAND",
+      "photos": [
+        "photos/projects/18-taipower/01.jpg"
+      ]
+    },
+    {
+      "title": "外交部 — 捷克經濟文化辦事處",
+      "location": "台南 · 臺南美術館一館",
+      "category": "EXHIBITION",
+      "photos": [
+        "photos/projects/19-mofa-czech/01.jpg"
+      ]
+    },
+    {
+      "title": "Tōmonchō 東門町",
+      "location": "嘉義",
+      "category": "EXHIBITION",
+      "photos": [
+        "photos/projects/20-tomoncho/01.jpg"
+      ]
+    },
+    {
+      "title": "X-iSLAND ReBORN 龜山植藝實驗所",
+      "location": "桃園",
+      "category": "EXHIBITION",
+      "photos": [
+        "photos/projects/21-x-island-reborn/01.jpg"
+      ]
+    },
+    {
+      "title": "SAMSUNG",
+      "location": "台北 · 台北家電展",
+      "category": "EXHIBITION",
+      "photos": [
+        "photos/projects/22-samsung/01.jpg"
+      ]
+    },
+    {
+      "title": "OOLO",
+      "location": "台北 · 台北自行車展",
+      "category": "EXHIBITION",
+      "photos": [
+        "photos/projects/23-oolo/01.jpg"
+      ]
+    },
+    {
+      "title": "LUMI",
+      "location": "台北 · INNOVEX 台北國際電腦展",
+      "category": "EXHIBITION",
+      "photos": [
+        "photos/projects/24-lumi/01.jpg"
+      ]
+    },
+    {
+      "title": "客家電視台",
+      "location": "桃園 · 客家博覽會",
+      "category": "EXHIBITION",
+      "photos": [
+        "photos/projects/25-hakka-tv/01.jpg"
+      ]
+    },
+    {
+      "title": "NEXTDRIVE",
+      "location": "台北 · 智慧能源展",
+      "category": "EXHIBITION",
+      "photos": [
+        "photos/projects/26-nextdrive/01.jpg"
+      ]
+    },
+    {
+      "title": "EVERLIGHT CHEMICAL",
+      "location": "台北 · 智慧顯示展",
+      "category": "EXHIBITION",
+      "photos": [
+        "photos/projects/27-everlight-chemical/01.jpg"
+      ]
+    },
+    {
+      "title": "NEXTDRIVE",
+      "location": "台北 · 智慧能源展",
+      "category": "EXHIBITION",
+      "photos": [
+        "photos/projects/28-nextdrive/01.jpg"
+      ]
+    },
+    {
+      "title": "ZAU",
+      "location": "台北 · 台北自行車展",
+      "category": "EXHIBITION",
+      "photos": [
+        "photos/projects/29-zau/01.jpg"
+      ]
+    },
+    {
+      "title": "SHIMANO",
+      "location": "台北 · 台北自行車展",
+      "category": "EXHIBITION",
+      "photos": [
+        "photos/projects/30-shimano/01.jpg"
+      ]
+    },
+    {
+      "title": "NEXTDRIVE",
+      "location": "台北 · 智慧能源週",
+      "category": "EXHIBITION",
+      "photos": [
+        "photos/projects/31-nextdrive/01.jpg"
+      ]
+    },
+    {
+      "title": "SANJET",
+      "location": "台北 · 台灣國際工具機展",
+      "category": "EXHIBITION",
+      "photos": [
+        "photos/projects/32-sanjet/01.jpg"
+      ]
+    },
+    {
+      "title": "DEX",
+      "location": "台北 · 台灣國際工具機展",
+      "category": "EXHIBITION",
+      "photos": [
+        "photos/projects/33-dex/01.jpg"
+      ]
+    },
+    {
+      "title": "ASPEED",
+      "location": "台北 · COMPUTEX 台北國際電腦展",
+      "category": "EXHIBITION",
+      "photos": [
+        "photos/projects/34-aspeed/01.jpg"
+      ]
+    },
+    {
+      "title": "NEXTDRIVE",
+      "location": "台北 · INNOVEX 台北國際電腦展",
+      "category": "EXHIBITION",
+      "photos": [
+        "photos/projects/35-nextdrive/01.jpg"
+      ]
+    },
+    {
+      "title": "CENTRAL MUSICAL INSTRUMENTAL",
+      "location": "横浜 Yokohama",
+      "category": "JAPAN",
+      "photos": [
+        "photos/projects/36-central-musical-instrumental/01.jpg"
+      ]
+    },
+    {
+      "title": "COFFEE GALLERY",
+      "location": "熊本 Kumamoto",
+      "category": "JAPAN",
+      "photos": [
+        "photos/projects/37-coffee-gallery/01.jpg"
+      ]
+    },
+    {
+      "title": "MUNSELL FLORAL SHOP",
+      "location": "東京 Tokyo",
+      "category": "JAPAN",
+      "photos": [
+        "photos/projects/38-munsell-floral-shop/01.jpg"
+      ]
+    },
+    {
+      "title": "NOON Bistro",
+      "location": "東京 Tokyo",
+      "category": "JAPAN",
+      "photos": [
+        "photos/projects/39-noon-bistro/01.jpg"
+      ]
+    },
+    {
+      "title": "BIG BABY ICE CREAM",
+      "location": "東京 Tokyo",
+      "category": "JAPAN",
+      "photos": [
+        "photos/projects/40-big-baby-ice-cream/01.jpg"
+      ]
+    },
+    {
+      "title": "PARLOR Bistro",
+      "location": "東京 Tokyo",
+      "category": "JAPAN",
+      "photos": [
+        "photos/projects/41-parlor-bistro/01.jpg"
+      ]
+    }
+  ]
+}
