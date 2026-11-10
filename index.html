@@ -291,10 +291,10 @@ class Component extends DCLogic {
     const fixPh = () => { if (window.BD_PHOTOS) { this.projects.forEach(p => { p.photos = p.photos.map(x => window.BD_PHOTOS[x] || x); }); this.forceUpdate(); } else setTimeout(fixPh, 100); }; fixPh();
     document.body.classList.toggle('bd-night', this.state.night);
     const K = { BRAND: 'B', EXHIBITION: 'E', JAPAN: 'J' };
-    fetch('content/projects.json').then(r => r.ok ? r.json() : Promise.reject()).then(d => {
+    fetch('content/projects.json?t=' + Date.now(), { cache: 'no-store' }).then(r => r.ok ? r.json() : Promise.reject()).then(d => {
       const list = (d.projects || []).filter(p => p && p.title && (p.photos || []).length);
       if (!list.length) return;
-      this.projects = list.map(p => { const k = K[p.category] || 'B'; return { name: p.title, loc: p.location || '', catKey: k, cat: this.catName[k], photos: p.photos.map(x => (window.BD_PHOTOS && window.BD_PHOTOS[x]) || x) }; });
+      this.projects = list.map(p => { const k = K[p.category] || 'B'; return { name: p.title, loc: p.location || '', catKey: k, cat: this.catName[k], photos: p.photos.map(x => { const s = typeof x === 'string' ? x : (x && (x.src || x.path || x.image)) || ''; return (window.BD_PHOTOS && window.BD_PHOTOS[s]) || s.replace(/^\/+/, ''); }).filter(Boolean) }; });
       this.forceUpdate();
     }).catch(() => {});
     this.onRs = () => { const m = window.innerWidth < 720; if (m !== this.state.mob) this.setState({ mob: m }); }; this.onRs(); window.addEventListener('resize', this.onRs);
