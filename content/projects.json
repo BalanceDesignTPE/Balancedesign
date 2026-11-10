@@ -1,21 +1,21 @@
 {
   "projects": [
     {
-      "title": "BOSE",
-      "location": "台南 · 台南遠百",
-      "category": "BRAND",
-      "photos": [
-        "photos/projects/02-bose/01.jpg",
-        "photos/projects/02-bose/02.jpg"
-      ]
-    },
-    {
       "title": "NATIONAL GEOGRAPHIC",
       "location": "台北 · 信義威秀",
       "category": "BRAND",
       "photos": [
         "photos/projects/01-national-geographic/01.jpg",
         "photos/projects/01-national-geographic/02.jpg"
+      ]
+    },
+    {
+      "title": "BOSE",
+      "location": "台南 · 台南遠百",
+      "category": "BRAND",
+      "photos": [
+        "photos/projects/02-bose/01.jpg",
+        "photos/projects/02-bose/02.jpg"
       ]
     },
     {
